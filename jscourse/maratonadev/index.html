@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- HTML-->
+
+<html>
+<!-- Configurations-->
+
+<head>
+    <title>Blood Donation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+
+</head>
+<!-- Contents-->
+
+<body>
+
+    <!-- Header-->
+    <header>
+        <img  class="logo" src="logo.png" alt="Imagem de DOE">
+        <h2>A sua doação importa</h2>
+        <p>Até 3 vidas com 1 doação</p>
+        <p>Mais de 38 mil doações são necessárias todos os dias!</p>
+        <p>Apenas 1,9% da população brasileira doa sangue.</p>
+
+        <button>Quero ajudar!</button>
+    </header>
+    <!-- Header-->
+
+    <!-- Forms -->
+    <section class="form hide">
+        <h2>Entre na lista de Doadores: </h2>
+        <form action="/" method="POST">
+            
+            <input type="text" name="name" placeholder="Nome Completo">
+
+            <input type="text" name="email" placeholder="Email">
+
+            <input type="text" name="blood" placeholder="Sangue">
+
+            <button>Quero ajudar!</button>
+            
+        </form>
+    </section>
+    <!-- Forms -->
+
+    <!-- Main -->
+    <main>
+        <h2>Últimos <span>Disciplinas</span></h2>
+
+        <section class="donors">
+
+            {% for donor in donors %}
+            <div class="donor">
+                <div class="blood">{{donor.blood}}</div>
+                <p>{{donor.name}}</p>
+            </div>
+            {% endfor %}
+        </section>
+    </main>
+    <!-- Main -->
+
+    <!-- Footer -->
+    <footer> Com ❤ Gabriel Fernandes</footer>
+    <!-- Footer -->
+
+    <!-- Script -->
+    <script src="scripts.js"></script>
+    <!-- Script -->
+
+</body>
+
+
+</html>
