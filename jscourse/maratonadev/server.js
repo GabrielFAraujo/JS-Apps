@@ -56,7 +56,7 @@ server.post("/", function(req, res) {
         VALUES($1, $2, $3)`
 
     const values = [name, email, blood]
-
+    
     db.query(query, values, function(err) {
 
         //Fluxo de erro
